@@ -1,1 +1,21 @@
-pygame
+import tkinter as tk
+
+def on_continue():
+    root.destroy()  # Close the window
+
+root = tk.Tk()
+root.title("Vulcan Industries Opening Screen")
+root.attributes('-fullscreen', True)  # Fullscreen
+
+# Background color
+root.configure(bg='#0A2878')  # Deep blue
+
+# Logo text
+logo = tk.Label(root, text="Vulcan Industries", font=("Arial", 48, "bold"), fg="white", bg='#0A2878')
+logo.pack(pady=100)
+
+# Welcome button
+btn = tk.Button(root, text="Welcome! Tap to continue.", font=("Arial", 32), fg='#0A2878', bg="white", command=on_continue)
+btn.pack(pady=40)
+
+root.mainloop()
